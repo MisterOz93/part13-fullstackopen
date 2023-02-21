@@ -1,0 +1,28 @@
+{
+  "name": "part13-fullstackopen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MisterOz93/part13-fullstackopen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MisterOz93/part13-fullstackopen/issues"
+  },
+  "homepage": "https://github.com/MisterOz93/part13-fullstackopen#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "pg": "^8.9.0",
+    "sequelize": "^6.28.0"
+  }
+}
