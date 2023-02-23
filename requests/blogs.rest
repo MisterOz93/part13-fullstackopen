@@ -6,11 +6,21 @@ POST http://localhost:3001/api/blogs
 Content-Type: application/json
 
 {
-    "author": "",
-    "url": "",
-    "title": "",
+    "author": "test",
+    "url": "test",
+    "title": "test",
     "likes": 1234
 }
 ############
 
 DELETE http://localhost:3001/api/blogs/6
+
+
+#########
+
+PUT http://localhost:3001/api/blogs/7
+Content-Type: application/json
+
+{
+    "likes": 4321
+}
