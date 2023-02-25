@@ -1,6 +1,7 @@
 const errorHandler = (error, req, res, next) => {
     if (error.name === 'SequelizeValidationError') {
-        return res.status(400).send({ error: 'Blog must have valid URL and Title fields'})
+        const thisError = error.errors[0]
+        return res.status(400).send({ error: `Validation error ${thisError.validatorKey} on ${thisError.path}`})
     }
     if (error.name === 'SequelizeDatabaseError' && 
     error.message.includes('invalid input syntax for integer')){

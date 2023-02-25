@@ -7,12 +7,13 @@ router.get('/', async (req, res) => {
   res.json(users)
 })
 
-router.post('/', async (req, res) => {
+router.post('/', async (req, res, next) => {
   try {
     const user = await User.create(req.body)
     res.json(user)
   } catch(error) {
-    return res.status(400).json({ error })
+    next(error)
+    return res.status(400)
   }
 })
 
@@ -23,10 +24,11 @@ router.put('/:username', async (req, res, next) => {
     try {
       user.username = req.body.username
       await user.save()
+      res.json(user)
     } catch (e) {
       next(e)
+      return res.status(400)
     }
-    res.json(user)
     
   } else {
     res.status(404).end()

@@ -6,17 +6,17 @@ POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {
-   "username": "foo",
-   "name": "Foo McFooson"
+   "username": "bar@bar.bar",
+   "name": "Bar McBarson"
 }
 ############
 
 
 #########
 
-PUT http://localhost:3001/api/users/bar
+PUT http://localhost:3001/api/users/foo@foo.foo
 Content-Type: application/json
 
 {
-    "username": "foo"
+    "username": "foo@foo.foo"
 }
