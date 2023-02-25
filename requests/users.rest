@@ -1,0 +1,22 @@
+GET http://localhost:3001/api/users
+
+###############
+
+POST http://localhost:3001/api/users
+Content-Type: application/json
+
+{
+   "username": "foo",
+   "name": "Foo McFooson"
+}
+############
+
+
+#########
+
+PUT http://localhost:3001/api/users/bar
+Content-Type: application/json
+
+{
+    "username": "foo"
+}

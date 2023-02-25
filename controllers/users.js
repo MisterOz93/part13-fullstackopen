@@ -17,7 +17,7 @@ router.post('/', async (req, res) => {
 })
 
 router.put('/:username', async (req, res, next) => {
-  const user = await User.findByPk(req.params.username)
+  const user = await User.findOne({where: { username: req.params.username }})
   if (user) {
    
     try {
