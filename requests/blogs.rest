@@ -4,6 +4,7 @@ GET http://localhost:3001/api/blogs
 
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZvb0Bmb28uZm9vIiwiaWQiOjEsImlhdCI6MTY3NzUxMzE5MiwiZXhwIjoxNjc3NTE2NzkyfQ.ub1DluDszdoFDv9hbjI3G1uFR36wJ3Wit5rEgnIeLFY
 
 {
     "author": "test",
@@ -13,7 +14,7 @@ Content-Type: application/json
 }
 ############
 
-DELETE http://localhost:3001/api/blogs/6
+DELETE http://localhost:3001/api/blogs/7
 
 
 #########
