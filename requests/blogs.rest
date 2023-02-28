@@ -7,9 +7,9 @@ Content-Type: application/json
 Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhckBiYXIuYmFyIiwiaWQiOjIsImlhdCI6MTY3NzYwNDQ3MiwiZXhwIjoxNjc3OTY0NDcyfQ.i0WT-axKaHuICTR56_3CSaxrDULkrpB2xAUyVNopLnU
 
 {
-    "author": "Test McTest",
+    "author": "react guru",
     "url": "test.test",
-    "title": "react harder"
+    "title": "testing for exercise 13.14"
 }
 ############
 
