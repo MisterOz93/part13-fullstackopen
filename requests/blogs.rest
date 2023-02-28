@@ -9,7 +9,7 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhc
 {
     "author": "react guru",
     "url": "test.test",
-    "title": "testing for exercise 13.14"
+    "title": "including word react to make sure this gets returned in search query"
 }
 ############
 
@@ -18,11 +18,11 @@ Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJhc
 
 #########
 
-PUT http://localhost:3001/api/blogs/7
+PUT http://localhost:3001/api/blogs/1
 Content-Type: application/json
 
 {
-    "likes": 1112
+    "likes": 44444
 }
 
 #########
