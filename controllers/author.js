@@ -3,7 +3,7 @@ const { Op, Sequelize } = require('sequelize')
 const Blog = require('../models/blog')
 
 router.get('/', async (req, res) => {
-    const idk = await Blog.findAll({ 
+    const authors = await Blog.findAll({ 
         group: ['author'], 
         attributes: [
             [Sequelize.fn('count', Sequelize.col('id')), 'blogs'], 
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
         ],
         order: [['total likes', 'DESC'] ]
     })
-    return res.json(idk)
+    return res.json(authors)
 })
 
 module.exports = router
