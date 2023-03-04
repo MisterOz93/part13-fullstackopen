@@ -2,12 +2,17 @@ GET http://localhost:3001/api/users
 
 ###############
 
+GET http://localhost:3001/api/users/1
+
+
+###########
+
 POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {
-   "username": "foo@foo.foo",
-   "name": "Foo McFooson"
+   "username": "bar@bar.bar",
+   "name": "Bar McBarson"
 }
 ############
 
