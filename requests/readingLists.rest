@@ -9,3 +9,13 @@ Content-Type: application/json
     "blogId": 4,
     "userId": 1
 }
+
+##########
+
+PUT http://localhost:3001/api/readinglists/4
+Content-Type: application/json
+Authorization: bearer
+    
+{
+    "read": true
+}
