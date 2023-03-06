@@ -11,8 +11,8 @@ POST http://localhost:3001/api/users
 Content-Type: application/json
 
 {
-   "username": "bar@bar.bar",
-   "name": "Bar McBarson"
+   "username": "banMe@ban.banned",
+   "name": "User to be banned"
 }
 ############
 

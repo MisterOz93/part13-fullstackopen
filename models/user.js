@@ -23,6 +23,10 @@ User.init({
     type: DataTypes.STRING,
     allowNull: false
   },
+  banned: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false
+  },
 }, {
   sequelize,
   underscored: true,
