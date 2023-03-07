@@ -1,5 +1,5 @@
 const router = require('express').Router()
-const { tokenExtractor } = require('../util/middleware')
+const { tokenExtractor, validUser } = require('../util/middleware')
 
 const { ReadingList, User } = require('../models')
 
@@ -20,11 +20,15 @@ router.get('/', async (req, res) => {
     return res.json(blogsInList)
 })
 
-//add validUser middleware here
-router.put('/:id', tokenExtractor, async (req, res, next) => {
+router.put('/:id', tokenExtractor, validUser, async (req, res, next) => {
+
   try {
     const user = await User.findOne({where: {username: req.decodedToken.username}})
     const readingList = await ReadingList.findByPk(req.params.id)
+
+    if (!readingList){
+      return res.status(400).json({error: 'Readinglist with provided ID not found.'})
+    }
    
     if (user.id !== readingList.userId){
       return res.status(400).json({error: "User can only mark his/her own readinglist as read"})
