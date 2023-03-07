@@ -4,18 +4,18 @@ GET http://localhost:3001/api/blogs
 
 POST http://localhost:3001/api/blogs
 Content-Type: application/json
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZvb0Bmb28uY29tIiwiaWQiOjEsImlhdCI6MTY3Nzc4ODE1MCwiZXhwIjoxNjc4MTQ4MTUwfQ.ggVoKRZercaUw65Lc4O68YJ0zlw7-f_bnUymQ_wmAIs
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZvb0Bmb28uY29tIiwiaWQiOjEsImlhdCI6MTY3ODE0NjAzN30.sGdeykACLDGXb9xPBiaDYa6xAwzx1PDsAkEbkTuokYc
 
 {
-    "author": "Some Dude",
-    "url": "blog.blog.com",
-    "title": "testing out migrations update",
-    "year": "2023"
+    "author": "idk",
+    "url": "finalblogdown",
+    "title": "testing out sessions update",
+    "year": "2021"
 }
 ############
 
-DELETE http://localhost:3001/api/blogs/3
-Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZvb0Bmb28uY29tIiwiaWQiOjEsImlhdCI6MTY3Nzc4ODE1MCwiZXhwIjoxNjc4MTQ4MTUwfQ.ggVoKRZercaUw65Lc4O68YJ0zlw7-f_bnUymQ_wmAIs
+DELETE http://localhost:3001/api/blogs/5
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImZvb0Bmb28uY29tIiwiaWQiOjEsImlhdCI6MTY3ODE0OTk3NH0.1zDkL1hA2M3-zgSCV9PEjzAimjAkh8YVSHvtA-DPQj4
 
 #########
 

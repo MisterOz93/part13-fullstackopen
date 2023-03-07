@@ -1,8 +1,8 @@
 const router = require('express').Router()
 const { Op } = require ('sequelize')
 
-const { Blog, User } = require('../models')
-const { tokenExtractor } = require('../util/middleware')
+const { Blog, User, ReadingList } = require('../models')
+const { tokenExtractor, validUser } = require('../util/middleware')
 
 router.get('/', async (req, res) => {
 
@@ -40,7 +40,7 @@ router.get('/', async (req, res) => {
   })
 
 
-router.post('/', tokenExtractor, async (req, res, next) => {
+router.post('/', tokenExtractor, validUser, async (req, res, next) => {
   try {
     const user = await User.findOne({where: {username: req.decodedToken.username}})
     const newBlog = await Blog.create({...req.body, userId: user.id })
@@ -68,12 +68,13 @@ router.put('/:id', async (req, res, next) => {
   }
 })
   
-router.delete('/:id', tokenExtractor, async (req, res, next) => {
+router.delete('/:id', tokenExtractor, validUser, async (req, res, next) => {
   const blog = await Blog.findByPk(req.params.id);
   if (blog){
     try {
       const user = await User.findOne({where: {username: req.decodedToken.username}})
       if (user.id === blog.userId){
+        await ReadingList.destroy({where: {blogId: blog.id}})
         await blog.destroy()
       } 
       else {

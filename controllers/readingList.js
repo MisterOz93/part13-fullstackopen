@@ -20,6 +20,7 @@ router.get('/', async (req, res) => {
     return res.json(blogsInList)
 })
 
+//add validUser middleware here
 router.put('/:id', tokenExtractor, async (req, res, next) => {
   try {
     const user = await User.findOne({where: {username: req.decodedToken.username}})
